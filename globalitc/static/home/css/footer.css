@@ -1,0 +1,78 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 35px 0;
+    margin-top: 50px;
+    background-color: #421845;
+}
+footer div{
+    width: 195px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+footer div ul{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+footer div ul li{
+    list-style: none;
+    margin: 5px 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+footer div ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: .4s;
+    font-weight: 100;
+}
+footer div ul li a:hover{
+    text-decoration: underline;
+}
+footer div h4{
+    color: white;
+    margin:15px 0;
+}
+.courses-1 a{
+    color: #cacaca;
+}
+.scenarios ul li {
+    color: #cacaca
+}
+.support ul li a{
+    color: #cacaca
+}
+.col-1{
+    width: 470px;
+    height: 278px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+} 
+.col-2{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+} 
+.networks i{
+    font-size: 18px;
+}
+.networks a{
+    margin-left: 10px;
+}

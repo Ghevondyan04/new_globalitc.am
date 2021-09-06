@@ -1,0 +1,449 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block css_links %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> 
+    <link rel="stylesheet" href="{% static 'home/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/media.css' %}">
+    {% endblock %}
+
+            <!-- section-1-start -->
+            <div class="section-1">
+           
+                <div class="sms">
+                 
+                </div>
+                <div class="section-1-absalute">
+               <!-- container-1-start -->
+               <div class="container-1">
+<div >
+   
+        <h1  class="typewrite" data-period="2000" data-type='[  "Սկսի՛ր քո կարիերան  IT ոլորտում", "I Love Design.", "I Love to Develop." ]'>
+            <span class="wrap"></span>
+          </h1>
+  
+       
+</div>
+<div class="href-relative">
+ <div class="href-flex">
+    <div class="section-1-href"> 
+        <a href="#">Դասընթացներ</a>
+      </div>
+ <div class="section-1-href">
+    <a href="#">Ծառայություններ</a>
+ </div>
+ </div>
+ <div class="iconss">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-linkedin-in"></i>
+
+ </div>
+  <!--Դասընթացներ start -->
+ 
+  <!--Դասընթացներ end -->
+   <!--Ծառայություններ start  -->
+
+   <!--Ծառայություններ end   -->
+</div>
+                </div>
+                  <!-- carusel-start -->
+                  <div class="slider-container">
+                    <div class="slider" id="main-slider"><!-- outermost container element -->
+                        <div class="slider-wrapper"><!-- innermost wrapper element -->
+                        {% for head in header_data %}
+                            <img src="{{ head.header_image.url }}" alt="" class="slide"  />
+                        {% endfor %}
+                        </div>
+                    </div>	
+                  </div>
+              
+              <!-- carusel-end -->
+                  <!-- container-1-end -->
+                </div>
+              
+            </div>
+            <div class="href-relative href-reletive-350">
+                <div class="href-flex">
+                   <div class="section-1-href"> 
+                       <a href="#">Դասընթացներ</a>
+                     </div>
+                <div class="section-1-href">
+                   <a href="#">Ծառայություններ</a>
+                </div>
+                </div>
+                <div class="iconss">
+                   <i class="fab fa-facebook-f"></i>
+                   <i class="fab fa-instagram"></i>
+                   <i class="fab fa-twitter"></i>
+                   <i class="fab fa-linkedin-in"></i>
+           
+                </div>
+                 <!--Դասընթացներ start -->
+                
+                 <!--Դասընթացներ end -->
+                  <!--Ծառայություններ start  -->
+            
+                  <!--Ծառայություններ end   -->
+           </div>
+          
+            <!-- section-1-end -->
+             <!-- section-2-start -->
+            <div class="section-2">
+                <div>
+                    <h2>Նորություններ և Առաջարկներ</h2>
+                </div>
+                <div class="container-2">
+                    <div id="container-2-1">
+                        {% for offer in offers_data %}
+                            {% if offer.in_home_page %}
+                        <div class="container-2-1-img">
+                            <img src="{{ offer.offer_image.url }}" alt="">
+                            <h3 class="container-2-1-img-h3">{{ offer.offer_title }}</h3>
+                        </div>
+                        <div class="container-2-1-text">
+                            <h3 class="container-2-1-img-h3-1900">{{ offer.offer_title }}</h3>
+                            <p>{{ offer.offer_context| truncatewords:50 }}</p>
+                                <div>
+                                    <div class="two-components-flex-1"> 
+                                        <p>Հայտարարությունը տեղադրվել է՝</p>
+                                        <p>{{ offer.created_at }}</p>
+                                    </div>
+                                        <div class="two-components-flex-1">
+                                            <p>Դիմելու վերջնաժամկետն է՝</p>
+                                            <p>{{ offer.last_date }}</p>
+                                        </div>
+                                </div>
+                                <!--Es imanal avelini pahy pti tani henc yte-->
+                                <a href="#" class="learn-more">Իմանալ Ավելին</a>
+                        </div>
+                    </div>
+                            {% endif %}
+                        {% endfor %}
+                    <div id="container-2-2">
+                        {% for news in news_data %}
+                            {% if news.in_home_page %}
+                         <div class="container-2-2-text">
+                                 <p>{{ news.news_title }}</p>
+                                <p class="p-absalute"><img src="{{ news.news_image.url }}" alt="" class="learn-mores"></p>
+                         </div>
+                    </div>
+                </div>
+                            {% endif %}
+                        {% endfor %}
+                <div class="watch-more">
+                    <a href="#">Դիտել Ավելին</a>
+                </div>
+            </div>
+             <!-- section-2-end -->
+             <!-- section-3-start -->
+            <div class="section-3">
+                
+                <div  class="container-3">
+                    <div class="section-3-name">
+                        <h2>Ֆակուլտետներ</h2>
+                    </div>
+                    {% for faculty in faculties_data %}
+                    <div class="section-3-container-sections">
+                        <div class="section-3-contaiener-1-1">
+                            <div>
+                                <div class="icon-1">
+                                    <img src="{{ faculty.fac_image.url }}" alt="" >
+                                </div>
+                                <h3 class="abs">{{ faculty.fac_title }}</h3>
+                            </div>
+                            <div class="section-3-components-center">
+                                <img src="{{ faculty.fac_icon.url }}" alt="" class="pos-absalute">
+                                <img src="{{ faculty.large_icon.url }}" alt="">
+                                <div class="section-3-container-text-1">
+                                {% for faculty_course in faculties_course_data %}
+                                    <section>
+                                        <div>
+                                            <p>{{ faculty_course.course_title }}</p>
+                                            <img src="{{ faculty_course.course_icon.url }}" alt="">
+                                        </div>
+                                     
+                                        <div class="line-1"></div>
+                                    </section>
+                                {% endfor %}
+                                </div>
+                            </div>
+                            <div class="section-3-href">   <a href="#">Դիտել</a></div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="section-3">
+                
+                <div  class="container-3">
+                    <div class="section-3-name">
+                        <h2>Ծառայություններ</h2>
+                    </div>
+                    <div class="section-4-container-sections">
+                        <div class="section-4-contaiener-1-1">
+                            <div>
+                              
+                                <h3>Վեբ Կայքերի  Պատրաստում</h3>
+                            </div>
+                            <div class="section-4-components-center ilustration-2">
+                                <img src="{% static 'home/image/Group (2).svg' %}" alt="">
+                               <div>
+                                       
+                               </div>
+                            </div>
+                            <div class="section-3-href-1">   <a href="#">Դիտել</a></div>
+                        </div>
+                        <div class="section-4-contaiener-1-1">
+                            <div>
+                                <h3>Բջջային Հավելվածների Պատրաստում</h3>
+                            </div>
+                            <div class="section-4-components-center ilustration-1">
+                                <img src="{% static 'home/image/Group 771240.svg' %}" alt="">
+                            </div>
+                            <div class="section-3-href-1">   <a href="#">Դիտել</a></div>
+                        </div>
+                        <div class="section-4-contaiener-1-1">
+                            
+                            <div class="section-4-components-center">
+                                <div class="section-4-container-text-1">
+                                    {% serv in services_data %}
+                                    <div>
+                                        <p>{{ serv.service_title }}</p>
+                                        <img src="{{ serv.service_image.url }}" alt="">
+                                    </div>
+                                    <div class="line-2"></div>
+                                    {% endfor %}
+                                </div>
+                               <div>
+                                       
+                               </div>
+                            </div>
+                            <div class="section-3-href-1">   <a href="#">Դիտել</a></div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="section-2 section-2-flex">
+                <div>
+                    <h2>Մեր Մասին</h2>
+                </div>
+                <div class="container-10">
+                    <div class="container-4-1">
+                       <p>«ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից: Մենք առաջարկում ենք ծրագրային տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել ձեր բիզնեսի շահութաբերությունը և նպաստել աճին: Մեր ստեղծարար թիմը համատեղ ուժերով տալիս Է նորարարական լուծումներ, որոնք նպաստում են ձեր բիզնեսի թիրախային լսարանի ներգրավմանը:
+                        «ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից: Մենք առաջարկում ենք ծրագրային տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել ձեր բիզնեսի շահութաբերությունը և նպաստել աճին: Մեր ստեղծարար թիմը համատեղ ուժերով տալիս Է նորարարական լուծումներ, որոնք նպաստում են ձեր բիզնեսի թիրախային լսարանի ներգրավմանը:</p>
+                    </div>
+                    <div class="container-2-3-container">
+                        <div class="container-2-3">
+                            <img  class = "animate-1" src="{% static 'home/image/1-st cycle.svg' %}">
+                            <img  class = "animate-2" src="{% static 'home/image/2-nd cycle.svg' %}">
+                            <img  class = "animate-3" src="{% static 'home/image/3-rd cycle.svg' %}">
+                            <img  class = "animate-4" src="{% static 'home/image/play-button.svg' %}">
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="section-3">
+                
+                    <div  class="container-3">
+                        <div class="section-3-name">
+                            <h2>Ֆակուլտետներ</h2>
+                        </div>
+                        <div class="section-3-container-sections sections-sections">
+                    
+                            <div class="section-5-contaiener-1-1">
+                               
+                                <div>
+                                    <img src="../image/Group 771322.svg" alt="">
+                                </div>
+                                <div>
+                                    <h3> Պրոֆեսիոնալ Մոտեցում</h3>
+                                </div>
+                                <div>
+                                    <p>Մեր մասնագետները ամեն ինչ կանեն որ 
+                                        ձեզ ապահովեն բարձրորակ կրթությամբ և ծառայություններով։ Երկար տարիների 
+                                        փորձը և բարձորակ աշխատանքային 
+                                        մոտեցումը կտա իր արդյունքը։</p>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="section-5-contaiener-1-1">
+                               
+                                <div>
+                                    <img src="../image/Group 771323.svg" alt="">
+                                </div>
+                                <div>
+                                    <h3> Որակյալ Աշխատանք</h3>
+                                </div>
+                                <div>
+                                    <p>Մեր մասնագետները ամեն ինչ կանեն որ 
+                                        ձեզ ապահովեն բարձրորակ կրթությամբ և ծառայություններով։ Երկար տարիների 
+                                        փորձը և բարձորակ աշխատանքային 
+                                        մոտեցումը կտա իր արդյունքը։</p>
+                                </div>
+                            
+                            </div>
+                            <div class="section-5-contaiener-1-1">
+                               
+                                <div>
+                                    <img src="../image/Group 771324.svg" alt="">
+                                </div>
+                                <div>
+                                    <h3> Բարձրորակ Կրթություն</h3>
+                                </div>
+                                <div>
+                                    <p>Մեր մասնագետները ամեն ինչ կանեն, որ ձեզ ապահովեն բարձրորակ կրթությամբ և ծառայություններով։ Երկար տարիների 
+                                        փորձը և բարձորակ աշխատանքային 
+                                        մոտեցումը կտա իր արդյունքը։</p>
+                                </div>
+                            
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                  <h2 class="h2-section-4">Մեր Գործընկերները</h2>
+                <!-- section-3-end -->
+                <div class="section-4 section-4-scroll">
+                    <div class="owl-carousel owl-theme carusel-2">
+                        {% for part in partners_data %}
+                        <div class="item"><a href="{{ part.partner_link }}"><img src="{{ part.partner_logo.url }}" alt=""> </a> </div>
+                    </div>
+                </div>
+                <div class="section-5">
+                    <h2>Կապ</h2>
+                    <div class="container-5">
+                         <div class="container-5-inputs">
+                             <input type="text" placeholder="Անուն Ազգանուն">
+                             <input type="email" placeholder="Էլ-փոստ">
+                             <textarea placeholder="Հաղորդագրություն"></textarea>
+                             <div class="section-5-href">
+                                <a href="#">Ուղարկել</a>
+                             </div>
+                            
+                         </div>
+                    </div>
+                </div>
+                <div class="section-6">
+                    <div><a href="#"><img class="section-6-img-absalute" src="../image/Group 743 (1).png"id='coll-2' alt="">Պատվիրել զանգ</a></div>
+                    <div class="section-5-contacts">
+                        <p>կամ զանգահարել</p>
+                        <div >
+                            <p>+374 98 960 959</p>
+                            <p>+374 95 355 255</p>
+                        </div>
+                    </div>
+                    <div class="section-5-contacts">
+                        <p>Էլ-փոստ</p>
+                        <div >
+                            <p>gitedu@bk.ru</p>
+                            <p>globalit@gitedu.am</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-7">
+                    <div class="container-7">
+                        <p>Կրկնորինակիր QR Կոդը, և ստացիր մեր բոլոր տվյալները քո Բջջայինի մեջ</p>
+                        <div>
+                            <img src="../image/Group (1).png" alt="" id="qr-code">
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="section-8">
+                    <div class="container-8">
+                  <div>
+                      <img src="../image/Group 771325 (1).svg" alt="">
+                  </div>
+                  <div class="container-8-text">
+                      <h2>Բաժանորդագրվել</h2>
+                      <input type="text" placeholder="Էլ․ փոստ">
+                    
+                        <a href="#">
+                            Բաժանորդագրվել
+                    </a>
+                      
+                     
+                  </div>
+                    </div>
+                </div>
+            
+              
+                 <!-- footer start -->
+              
+                <!-- footer end -->
+            </div>
+            <footer>
+                <div class="col-1">
+        
+                
+                 <div class="courses">  
+                    <h4>Դասընթացներ</h4>
+                    <ul class="courses-1">
+                        <li><a href="">Վեբ ծրագրավորում  Մուլտիմեդիա</a></li>
+                        <li><a href="">Ծրագրավորում</a></li>
+                        <li><a href="">Մուլտիմեդիա</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Նախագծեր</a></li>
+                        <li><a href="">Աշխատանք</a></li>
+                        <li><a href="">Մեր մասին</a></li>
+                    </ul>
+                 </div>
+                 <div class="scenarios">
+                    <h4>Հասցեներ</h4>
+                    <ul>
+                        <li> Ք. Երևան Ալեք Մանուկլյան15ա (Հյուսիսային Համալսարան)</li>
+                        <li>Հեռախոսահամարներ</li>
+                        <li> <p>+374 95 355 255</p> <p>+374 98 960 959</p> </li>
+                        <li>Էլ․ հասցե </li>
+                        <li> <p>gitedu@bk.ru</p> <p>globalit@gitedu.am</p> </li>
+                    </ul>
+                 </div>
+                </div>
+                <div class="col-1">
+                 <div class="networks">
+                     <h4>Սոց․ Ցանցեր</h4>
+                     <ul>
+                         <li><a href=""><i class="fab fa-facebook-f"></i></a><a class="ablok" href="">Facebook</a></li>
+                         <li> <a href=""><i class="fab fa-instagram"></i></a><a class="ablok"  href="">Instagram</a></li>
+                         <li> <a href=""><i class="fab fa-twitter"></i></a><a class="ablok"  href="">Twitter</a></li>
+                         <li> <a href=""><i class="fab fa-linkedin-in"></i></a><a class="ablok"  href="">Linked In</a></li>
+                     </ul>
+                 </div>
+                 <div class="support">
+                     <h4>Աջակցություն</h4>
+                   <ul>
+                       <li><a href="">Օգնություն</a></li>
+                       <li><a href="">Կարգավիճակ</a></li>
+                       <li><a href="">Փոփոխություն</a></li>
+                       <li><a href="">Հետադարձ կապ</a></li>
+                   </ul>
+                 </div>
+                </div>
+                <p class="footer-end">Copyright ©2020 Բոլոր հեղինակային իրավունքները պաշտպանված են: |  Կայքը պատրաստված է "ԳԼՈԲԱԼ ԻՏ" (ՍՊԸ)-ի կողմից, որը հանդիսանում է ընկերության Պաշտոնական կայքէջը: Կայքից նույթ տեղադրելիս հղումը gitedu.am-ին պարտադիր է:</p>
+            </footer>
+</div>
+    
+    <script src="../js/signup.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/particles.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+    <script src="../js/script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
+    <!--    <link rel="stylesheet" href="../css/signup.css">-->
+    <!--    <link rel="stylesheet" href="../css/signup-2.css">-->
+    <!--    <link rel="stylesheet" href="../css/signup-3.css">-->
+    <!--    <link rel="stylesheet" href="../css/signup-4.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static 'base/css/menyu.css' %}">
+    {% block css_links %}
+    <!--    Additional </link> tags need to add stex-->
+    {% endblock %}
+    <title>
+        {% block title %}
+        GlobalIt - ՏՏ մանագիտություն
+        {% endblock %}
+    </title>
+</head>
+<body id="body">
+<!--es taki comment aracy registraciana pti avelacvi-->
+<!-- &lt;!&ndash; //....sign up start &ndash;&gt;-->
+<!-- <div id="signup_1">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-1">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x">-->
+<!--       <div class="signup-container-center">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../img/signup-1-img-1.svg" alt="">-->
+<!--                <h2>Գործընկեր</h2>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Ընկերության անվանումը">-->
+<!--            <input type="text" placeholder="Ընկերության տնօրեն">-->
+<!--            <input type="text" placeholder="Ընկերության հեռախոսահամարը">-->
+<!--            <input type="email" placeholder="Ընկերության էլ․ փոստ">-->
+<!--            <input type="text" placeholder="Ընկերության հասցեն">-->
+<!--            <div class="seclect-absalute-2">-->
+<!--                <i class="fa fa-angle-down"></i>-->
+<!--                <select name="" id="">-->
+<!--                    <option value="">Գործունեության ոլորտը </option>-->
+<!--                    -->
+<!--                </select>-->
+<!--            </div>-->
+<!--          <div class="seclect-absalute-2">-->
+<!--            <i class="fa fa-angle-down"></i>-->
+<!--            <select name="" id="">-->
+<!--                <option value="">-->
+<!--                    Համագործակցության նպատակը-->
+<!--                  -->
+<!--                </option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--          -->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--          -->
+<!--       </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_2">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-2">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-2">-->
+<!--       <div class="signup-container-center">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../img/signup-l;ogo-2.svg" alt="">-->
+<!--                <h5 class="h2-1">Ուսումնական Հաստատություն</h5>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Ուս․ Հաստատության անվանումը">-->
+<!--            <input type="text" placeholder="Ուս․ Հաստատության տնօրեն">-->
+<!--            <input type="text" placeholder="Ուս․ հաստատության հեռախոսահամարը">-->
+<!--            <input type="email" placeholder="Ուս․ հաստատության էլ․ փոստ">-->
+<!--            <input type="text" placeholder="Ուս․ հաստատության հասցեն">-->
+<!--            <div class="seclect-absalute-2">-->
+<!--                <i class="fa fa-angle-down"></i>-->
+<!--                <select name="" id="">-->
+<!--                    <option value="">Ուս․ հաստատության տեսակը </option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--          <div class="seclect-absalute-2">-->
+<!--            <i class="fa fa-angle-down"></i>-->
+<!--            <select name="" id="">-->
+<!--                <option value="">-->
+<!--                    Համագործակցության նպատակը-->
+<!--                   -->
+<!--                </option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--          -->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--          -->
+<!--       </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_3">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-3">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-3">-->
+<!--       <div class="signup-container-top">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../img/openmoji_student-light-skin-tone.svg" alt="">-->
+<!--                <h2 class="h2-1"> Ուսանող</h2>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Անուն Ազգանուն">-->
+<!--            <input type="text" placeholder="Հեռախոսահամար / Էլ․ փոստ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--           <div class="or">-->
+<!--               <div class="line-5"></div>-->
+<!--              <h3>Կամ</h3>-->
+<!--              <div class="line-5"></div>-->
+<!--        </div>-->
+<!--        <div class="facebook-google">-->
+<!--            <a href="" class="sign-up-registrarion facebook facbook-google"><img src="../img/facebook.svg" alt=""> <p>Գրանցվել Facebook-ով</p> </a>-->
+<!--            <a href="" class="sign-up-registrarion google facbook-google"><img src="../img/grommet-icons_google.svg" alt=""><p>Գրանցվել Google-ով</p> </a>-->
+<!--        </div>-->
+<!--       </div>-->
+<!--       -->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_6">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-5">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-5">-->
+<!--       <div class="signup-container-top">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../image/openmoji_man-teacher (2).svg" alt="">-->
+<!--                <h2 > Դասախոս</h2>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Անուն Ազգանուն">-->
+<!--            <input type="text" placeholder="Հեռախոսահամար / Էլ․ փոստ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--           <div class="or">-->
+<!--               <div class="line-5"></div>-->
+<!--              <h3>Կամ</h3>-->
+<!--              <div class="line-5"></div>-->
+<!--        </div>-->
+<!--        <div class="facebook-google">-->
+<!--            <a href="" class="sign-up-registrarion facebook facbook-google"><img src="../img/facebook.svg" alt=""> <p>Գրանցվել Facebook-ով</p> </a>-->
+<!--            <a href="" class="sign-up-registrarion google facbook-google"><img src="../img/grommet-icons_google.svg" alt=""><p>Գրանցվել Google-ով</p> </a>-->
+<!--        </div>-->
+<!--       </div>-->
+<!--       -->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_5">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-6">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-6">-->
+<!--       <div class="signup-container-top">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../image/0020.svg" alt="">-->
+<!--                <h5 class="h2-2"> Ֆրիլանսեր/Գործատու</h5>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Անուն Ազգանուն">-->
+<!--            <input type="text" placeholder="Հեռախոսահամար / Էլ․ փոստ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--           <div class="or">-->
+<!--               <div class="line-5"></div>-->
+<!--              <h3>Կամ</h3>-->
+<!--              <div class="line-5"></div>-->
+<!--        </div>-->
+<!--        <div class="facebook-google">-->
+<!--            <a href="" class="sign-up-registrarion facebook facbook-google"><img src="../img/facebook.svg" alt=""> <p>Գրանցվել Facebook-ով</p> </a>-->
+<!--            <a href="" class="sign-up-registrarion google facbook-google"><img src="../img/grommet-icons_google.svg" alt=""><p>Գրանցվել Google-ով</p> </a>-->
+<!--        </div>-->
+<!--       </div>-->
+<!--       -->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_7">-->
+<!--    <div class="signup-container">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back"id="back-7">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-7">-->
+<!--       <div class="signup-container-top">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--           <div>-->
+<!--               <div class="img-text-signup-container">-->
+<!--                <img src="../image/0021.svg" alt="">-->
+<!--                <h2 > Հյուր</h2>-->
+<!--               </div>-->
+<!--             <div class="secrlct-img">-->
+<!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--           -->
+<!--           <div class="signup-inputs-select">-->
+<!--            <input type="text" placeholder="Անուն Ազգանուն">-->
+<!--            <input type="text" placeholder="Հեռախոսահամար / Էլ․ փոստ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառ">-->
+<!--            <input type="password" placeholder="Գաղտնաբառի կրկնություն">-->
+<!--            <a href="" class="sign-up-registrarion">Գրանցվել</a>-->
+<!--           </div>-->
+<!--           <div class="or">-->
+<!--               <div class="line-5"></div>-->
+<!--              <h3>Կամ</h3>-->
+<!--              <div class="line-5"></div>-->
+<!--        </div>-->
+<!--        <div class="facebook-google">-->
+<!--            <a href="" class="sign-up-registrarion facebook facbook-google"><img src="../img/facebook.svg" alt=""> <p>Գրանցվել Facebook-ով</p> </a>-->
+<!--            <a href="" class="sign-up-registrarion google facbook-google"><img src="../img/grommet-icons_google.svg" alt=""><p>Գրանցվել Google-ով</p> </a>-->
+<!--        </div>-->
+<!--       </div>-->
+<!--       -->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="signup_4">-->
+<!--    <div class="signup-container-regist">-->
+<!--        <img src="../img/arow-back.svg" alt="" class="back" id="back-4">-->
+<!--        <img src="../img/x.svg"class="x" alt="" id="x-4">-->
+<!--       <div class="signup-container-center-2">-->
+<!--           <div class="logo-signup"> <img src="../img/Logo (2).svg" alt=""></div>-->
+<!--          -->
+<!--          <div class="signup-innerhtml">-->
+<!--              <div class="signup-innerhtml-container">-->
+<!--                   <button type="button" id="b-1" onclick="btn_1()">Գրանցվել-->
+<!--                    <div id="line-6"></div>-->
+<!--                   </button>-->
+<!--                 -->
+<!--              </div>-->
+<!--              <div class="signup-innerhtml-container">-->
+<!--                <button type="button" id="b-2" onclick="btn_2()">Մուտք-->
+<!--                    <div id="line-7"></div>-->
+<!--                </button>-->
+<!--                -->
+<!--              </div>-->
+<!--          </div>-->
+<!--          <div id="inner-btn">-->
+<!--                        -->
+<!--          </div>-->
+<!--       </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--  &lt;!&ndash; //....sign up end&ndash;&gt;-->
+
+<!-- //....menu start -->
+<nav>
+    <div class="nav-container">
+        <div class="logo-img-img">
+            <img src="{% static 'base/image/Group 771318.svg' %}" alt="" class="logo-size">
+        </div>
+
+        <div class="nav-container-sections-3">
+            <ul>
+                <li><a href="#">Գլխավոր</a></li>
+                <li class="facultet"><a href="#"> Ֆակուլտետներ <i class="fa fa-angle-down"></i></a>
+                    <div class="facultet-hover">
+                        {% for fac in faculties_data %}
+                        <a href="#"> { fac.fac_title }} <img src="{{ fac.fac_icon.url }}" alt=""> </a>
+                        <div class="line-1"></div>
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="secrviced-hover"><a href="#"> Ծառայություններ <i class="fa fa-angle-down"></i></a>
+                    <div class="services">
+                        {% for serv in services_data %}
+                        {% if other_service %}
+                        <h3 class="services-h3">Այլ ծառայություններ</h3>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">{{ serv.serv_title }}</a></p>
+                                        <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
+
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+
+                            </div>
+                            {% endif %}
+
+                        </div>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">{{ serv.serv_title }}</a></p>
+                                        <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt="" class="aaa1"></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
+                                        <a href=""><img src="../image/1111.svg" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Աշխատանք </a></li>
+                <li class="work"><a href="#" class="work_a"><img src="../image/cil_hamburger-menu.svg" alt=""
+                                                                 class="manu-none"></a>
+                    <div class="work-hover">
+                        <div>
+                            <a href="#">Նորություններ/Առաջարկներ</a>
+
+                        </div>
+                        <div class="line-1"></div>
+                        <div>
+                            <a href="#">Կապ</a>
+
+                        </div>
+                        <div class="line-1"></div>
+                        <div>
+                            <a href="#">Աշխատանք</a>
+
+                        </div>
+                        <div class="line-1"></div>
+                    </div>
+                </li>
+            </ul>
+            <img src="../image/Group 743 (1).svg" alt="" id="coll">
+            <div id="media-despley-none">
+                <img src="../image/serch (2).svg" alt="" class="armenia-1" id='search-on'>
+                <input type="text" placeholder="Որոնել" id="search">
+                <img src="../image/vs_door-open.svg" alt="" class="armenia-3" id="sign-up-registration-onclick">
+                <img src="../image/dark-font.svg" alt="" onclick="Light" id="armenia-1" class="armenia-2">
+country
+                <div class="lengujes">
+                    <img src="../image/armenia.png" alt="aaa" class="armenia-4" id="armenia">
+                    <div id="list-country">
+                        <img src="../image/emojione_flag-for-united-kingdom.svg" alt="" class="armenia">
+                        <img src="../image/emojione_flag-for-russia.svg" alt="" class="armenia">
+                    </div>
+                </div>
+
+            </div>
+            <div id="menu-320">
+                <img src="../image/cil_hamburger-menu.svg" alt="" id="manu-320-open">
+                <div id="manu-320-block">
+                    <div class="menu-320-products">
+                        <div class="logos-manu-320">
+                            <img src="../image/serch (2).svg" alt="" class="armenia-1" id='search-on-1'>
+                            <img src="../image/dark-font.svg" alt="" id="armenia-1-320" class="armenia-2">
+                            <img src="../image/vs_door-open.svg" alt="" class="armenia-3" id="door-open-350">
+                            <div class="lengujes">
+                                <img src="../image/armenia.png" alt="aaa" class="armenia-4" id="armenia">
+                                <div id="list-country">
+                                    <img src="../image/emojione_flag-for-united-kingdom.svg" alt="" class="armenia">
+                                    <img src="../image/emojione_flag-for-russia.svg" alt="" class="armenia">
+                                </div>
+                            </div>
+                            <img src="../image/eva_close-circle-fill (2).svg" id="coll-registration-hover-1" alt="">
+                        </div>
+                        <div class="menu-320-text">
+                            <div>
+                                <a href="#" class="manu-320-href">Ծառայություններ</a>
+
+                            </div>
+                            <div>
+                                <a href="#" class="manu-320-href">Ֆակուլտետներ</a>
+
+                            </div>
+                            <div>
+                                <a href="#" class="manu-320-href">Աշխատանք</a>
+
+                            </div>
+                            <div>
+                                <a href="#" class="manu-320-href">Կապ</a>
+
+                            </div>
+                            <div>
+                                <a href="#" class="manu-320-href">Նորություններ/Առաջարկներ</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="menu-320-hover">
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="media-block">
+                <a href="#" class="media-blok-a"><img src="../image/cil_hamburger-menu.svg" alt="">
+                    <div class="media-blok-hover">
+                        <div class="media-hover-flex">
+                            <img src="../image/Vector (2).png" alt="" class="armenia">
+                            <img src="../image/Vector (8).png" alt="" class="armenia">
+                            <img src="../image/armenia.png" alt="" class="armenia">
+                        </div>
+                        <div>
+                            <div class="medias-hover">
+                                <div class="line-1"></div>
+                                <a href="#">Նորություններ</a>
+                                <div class="line-1"></div>
+                                <a href="#">Կապ</a>
+                                <div class="line-1"></div>
+                                <a href="#">Առաջարկներ</a>
+                                <div class="line-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+</nav>
+
+<div id="cool-registration">
+    <img src="../image/armenia-flag.svg" alt="" class="armenia-flag">
+    <img src="../image/Logo.svg" alt="" class="logo-coll">
+    <img src="../image/eva_close-circle-fill (2).svg" id="coll-registration-hover" alt="">
+    <h3><img src="" alt=""></h3>
+    <div class="cool-registration-container">
+        <div class="href-1">
+            <div>
+                <a href="#" class="hrefs-1 color-1"> <img src="../image/Vector (15).svg" alt="">
+                    <p>+374 98 459 635</p></a>
+            </div>
+            <div>
+                <a href="" class="hrefs-1 color-2"> <img src="../image/Vector (16).svg" alt="">
+                    <p> +374 98 459 635</p></a>
+            </div>
+            <input type="text" placeholder="Անուն Ազգանուն" class="name-username">
+            <div class="seclect-absalute">
+                <i class="fa fa-angle-down"></i>
+                <select name="" id="">
+                    <option value="">Օր / Ժամ</option>
+                </select>
+            </div>
+
+            <input type="text" placeholder="+374" class="inp-2">
+            <a href="#" class="a-1">Պատվիրել Զանգ</a>
+        </div>
+        <div class="href-2">
+            <div c>
+                <a href="" class="hrefs-1 color-3"> <img src="../image/Vector (16).svg" alt="">
+                    <p> +374 98 459 635</p></a>
+            </div>
+            <div>
+                <a href="" class="hrefs-1 color-4"> <img src="../image/Vector (16).svg" alt="">
+                    <p> +374 98 459 635</p></a>
+            </div>
+            <img src="../image/Group 771326.svg" alt="" class="coll-registration-img">
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/signup.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../js/particles.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="../js/script.js"></script> -->
+<script src="../js/menyu.js"></script>
+
+</body>
+</html>

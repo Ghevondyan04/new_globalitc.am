@@ -1,0 +1,1 @@
+In app 'home_page': home page data,faculties data,services data,partners data.

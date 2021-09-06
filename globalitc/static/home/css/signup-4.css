@@ -1,0 +1,102 @@
+
+
+.signup-container-center-2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.signup-container-regist{
+    width: 948px;
+    height: 558px;
+    background: rgba(54, 54, 54, 0.61);
+    backdrop-filter: blur(57px);
+    border-radius: 15px;
+   position: relative;
+}
+.signup-container-regist button{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+   cursor: pointer;
+    font-size: 
+    24px;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.signup-innerhtml{
+    width: 80%;
+    margin:30px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+#line-6{
+    position: absolute;
+    width:
+    143px;
+    margin:10px 0;
+  left: -12px;
+    height: 2px;
+    background: #fff;
+    display: none;
+}
+#line-7{
+    position: absolute;
+    width:
+    143px;
+    margin:10px 0;
+  left: -33px;
+    height: 2px;
+    background: #fff;
+    display: none;
+}
+.line-block{
+    display: block !important;
+}
+.btn_color{
+    color: white !important;
+}
+
+.signup-innerhtml-container{
+position: relative;
+}
+.signup-innerhtml-container button{
+    font-size: 24px;
+}
+.facbook-google-1{
+    background: rgba(255, 255, 255, 0.2) !important; 
+   
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    position: relative;
+}
+.facbook-google-1 img{
+    position: absolute;
+    left: 20px;
+}
+.facbook-google-1:hover{
+    background: rgba(255, 255, 255, 0.49) !important;
+}
+.signupinnerhtml-2{
+    display: flex;
+    justify-content: space-between;
+}
+.signup-innerhtml-container-2{
+    width: 47%;
+}
+#b-1{
+ font-size: 24px !important;
+}
+#b-2{
+    font-size: 24px !important;
+   }
+   .signup-innerhtml-container button{
+       font-size: 24px;
+   }

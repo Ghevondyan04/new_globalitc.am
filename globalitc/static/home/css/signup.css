@@ -1,0 +1,351 @@
+#signup_4{
+    position: fixed;
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial ;
+    
+}
+*input{
+    color: #fff;
+}
+*input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+* input:focus{
+ outline: none;
+ color: #fff;
+
+}
+* select:focus{
+    outline: none;
+   color: rgba(255, 255, 255, 0.5);
+
+   }
+   .signup-container h2{
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+}
+.signup-container{
+    width: 948px;
+    height: 
+    1086px;
+    background: rgba(54, 54, 54, 0.61);
+    backdrop-filter: blur(57px);
+    border-radius: 15px;
+   position: relative;
+   
+}
+.signup-container input:focus{
+ color: #fff !important;
+}
+.signup-container img{
+    width: 92px;
+    height: 92px;
+}
+.select{
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
+
+
+.logo-signup img{
+    width: 192.89px;
+    height:  34px;
+    margin: 30px 0;
+}
+input{
+    width: 
+    347px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2) !important;
+   border-radius: 15px;
+   padding: 0 20px;
+   margin: 10px 0;
+   border:  none;
+  
+
+}
+option{
+    padding: 0 20px;
+}
+select{
+    border:  none;
+    width: 
+    347px;
+    height: 60px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 10px auto;
+    display: grid;
+    position: relative;
+    background-position-x:calc(100% - 8px);
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important; 
+     appearance: none !important;
+   
+   text-decoration: none !important;
+}
+select i{
+    position: absolute;
+    right: 20px;
+}
+select::-ms-expand{
+    margin-right: 20px;
+}
+.signup-inputs-select{
+ display: flex;
+ flex-direction: column;
+}
+.sign-up-registrarion{
+   width: 
+   347px;
+   height: 
+   70px;
+   background: linear-gradient(92.88deg, #B565D8 9.74%, #EE609C 99.48%);
+border-radius: 15px;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+color: #fff;
+font-size: 
+20px;
+}
+.signup-container-center{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.signup-container-center input{
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+.img-text-signup-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 320px;
+}
+.img-text-signup-container h2{
+    font-size: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.secrlct-img{
+    margin: 10px 0;
+}
+.x{
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ width: 20px !important;
+ height: 20px !important;
+ cursor: pointer;
+}
+.back{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 22.67px !important;
+     height: 19.83px !important;
+     cursor: pointer;
+}
+@media(max-width:760px){
+    
+    .signup-container{
+      width: 
+      auto !important;
+      height:1084px !important;
+    }
+    #signup_1{
+        left: 0%  !important;
+    
+    }
+    #signup_2{
+        left: 0% !important;
+        
+    }
+    #signup_3{
+        left: 0% !important;
+        
+    }
+    #signup_4{
+        left: 0% !important;
+        
+       
+    }
+    #signup_5{
+        left: 0% !important;
+        
+       
+    }
+    #signup_6{
+        left: 0% !important;
+        
+       
+    }
+    #signup_7{
+        left: 0% !important;
+        
+       
+    }
+    .signup-container-regist{
+        width: 
+        744px !important;
+    }
+  }
+  @media(max-width:320px){
+      .signup-container-regist{
+    height: auto !important;
+    width: 
+    305px !important;
+
+      }
+      .signup-container-regist input{
+          width: 
+          279px !important;
+      }
+      .signup-container-center-2{
+          height: auto !important;
+      }
+    .signupinnerhtml-2{
+        flex-direction: column !important;
+      }
+    .signup-container{
+        width: 305px !important;
+        height:auto !important;
+      }
+      h2{
+          font-size:
+          24px ;
+      }
+      input{
+          width: 265px !important;
+          height: 
+          60px !important;
+      }
+      select{
+        width: 265px !important;
+        height: 
+        60px !important;
+      }
+      .sign-up-registrarion{
+          width: 
+          265px !important;
+          height: 
+          70px !important;
+      }
+      .img-text-signup-container{
+          width: 200px !important;
+      }
+      .img-text-signup-container img{
+          margin-right:10px ;
+      }
+  }
+  .secrlct-img i{
+      color: #fff;
+      margin: 0 2px;
+  }
+  #signup_1{
+      position: absolute;
+      z-index: 998;
+      left: 25%;
+      top: 100px;
+      display: none;
+      height: auto !important;
+  }
+  #signup_1 .signup-container{
+      height: auto;
+      padding-bottom: 40px;
+  }
+  #signup_3 .signup-container{
+          height: 945px !important; 
+}
+  #signup_1 button{
+      font-size: 16px !important;
+  }
+  #signup_2 button{
+    font-size: 16px !important;
+}
+#signup_3 button{
+    font-size: 16px !important;
+}
+#signup_4 button{
+    font-size: 16px ;
+}
+  #signup_2{
+    position: absolute;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+#signup_3{
+    position: absolute;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+#signup_4{
+    position: absolute !important;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+#signup_5{
+    position: absolute !important;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+#signup_6{
+    position: absolute !important;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+#signup_7{
+    position: absolute !important;
+    z-index: 998;
+    left: 25%;
+    top: 100px;
+    display: none;
+    height: auto !important; 
+}
+.signup-block-onclick{
+      display: block !important;
+  }
+  #signup_4 a{
+      color: #fff !important;
+  }
+  .signup-inputs-select input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+   font-size: 
+   18px !important;
+  }
+  .signup-inputs-select input{
+      color: #fff !important;
+      font-size: 
+   18px !important;
+  }

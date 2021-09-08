@@ -11,22 +11,17 @@ class ContactWithUsForm(ModelForm):
             "full_name": TextInput(attrs={
                 'name': 'flname',
                 'type': 'text',
-                'class': 'inputtext _58mg p-cl',
                 'placeholder': 'Անուն Ազգանուն'
             }),
             "email": TextInput(attrs={
                 'name': 'email',
                 'type': 'email',
-                'class': 'inputtext _58mg p-cl',
                 'placeholder': 'Էլ-փոստ'
             }),
             "message": Textarea(attrs={
                 'name': 'message',
                 'type': 'email',
-                'class': 'inputtext _mg58 p-cl',
                 'placeholder': 'Հաղորդագրություն',
-                'cols': 100,
-                'rows': 10
             })
         }
 
@@ -38,12 +33,14 @@ class CallOrderForm(ModelForm):
 
         widgets = {
             'customer_name': TextInput(attrs={
-                # 'class' : 'ira_classi_anuny',
-                'placeholder': 'Անուն Ազգանուն'
+                'class': 'name-username',
+                'placeholder': 'Անուն Ազգանուն',
+                'type': 'text'
             }),
             'call_date': TextInput(attrs={
-                # 'class' : 'ira_classi_anuny',
-                'placeholder': 'Օր/Ժամ'
+                'class': 'inp-2',
+                'placeholder': '+374',
+                'type': 'text'
             }),
             'customer_number': TextInput(attrs={
                 # 'class' : 'ira_classi_anuny',
@@ -60,7 +57,6 @@ class SubscribeForm(ModelForm):
         widgets = {
             'email': TextInput(attrs={
                 'type': 'text',
-                'class': 'inputtext _58mg p-cl',
-                'placeholder': 'Էլ․ փոստ'
+                'placeholder': 'Էլ․ փոստ"'
             }),
         }

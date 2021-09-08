@@ -1,0 +1,672 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block css_links %}
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'news/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'news/media.css' %}">
+
+    {% endblock %}
+
+{% block main %}
+
+{$ for header in header_data %}
+<section class="section1">
+
+    <div class="div-left">
+                         <span class="text"
+                         >Նորություններ<br/>
+                              Առաջարկներ</span
+                         >
+        <span class="span">
+            {{ header.news_header_context }}
+        </span>
+    </div>
+    <div><img src="{{ header.news_header_image.url }}" alt="" class="div-img media-350-img-none"/></div>
+</section>
+<span class="span-350">
+{{ header.news_header_context }}
+</span>
+{% endfor %}
+{% for offer in offer_data %}
+<section class="section3">
+    <h2>Առաջարկներ</h2>
+    <div class="div-main">
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="{{ offer.offer_image.url }}" alt="" class="div-img"/></div>
+                    <span class="text">{{ offer.offer_title }}</span>
+                </div>
+
+                <div class="media-350-name-text">
+                                             <span>{{ offer.offer_context }}</span>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">{{ offer.created_at }}</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">2{{ offer.last_date }}</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <img src="pic2.png" alt=""/>
+                <div class="div-text">
+                                             <span class="span2"
+                                             >«StartUp» նախագիծ սկսնակների
+                                                  համար</span
+                                             >
+                    <span
+                    >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                    >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="img.png" alt="" class="div-img"/></div>
+                    <span class="text"
+                    >Նորություններ<br/>
+                                             Առաջարկներ</span>
+                </div>
+                <div class="media-350-name-text">
+                                             <span
+                                             >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                                             >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <img src="pic2.png" alt=""/>
+                <div class="div-text">
+                                             <span class="span2"
+                                             >«StartUp» նախագիծ սկսնակների
+                                                  համար</span
+                                             >
+                    <span
+                    >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                    >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="img.png" alt="" class="div-img"/></div>
+                    <span class="text"
+                    >Նորություններ<br/>
+                                             Առաջարկներ</span>
+                </div>
+                <div class="media-350-name-text">
+                                             <span
+                                             >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                                             >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <div class="media-350-name-img">
+                    <div class="media-350-name-container">
+
+                        <div><img src="img.png" alt="" class="div-img"/></div>
+                        <span class="text"
+                        >Նորություններ<br/>
+                                                  Առաջարկներ</span>
+                    </div>
+                    <div class="media-350-name-text">
+                                                  <span
+                                                  >StartUp նախագիծը<br/>
+                                                       նախատեսված է սկսնակ<br/>
+                                                       մասնագետների համար, իրենց<br/>
+                                                       սովորածը և հմտությունները<br/>
+                                                       ցուցադրելու համար<br/>
+                                                       ինչպես նաև․․․</span
+                                                  >
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Հայտարարությունը<br/>
+                                                            տեղադրվել է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Դիմելու<br/>
+                                                            վերջնաժամկետն է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <a href="" class="a2">
+                            <div>Իմանալ Ավելին</div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="media-display-none">
+                    <img src="pic2.png" alt=""/>
+                    <div class="div-text">
+                                                  <span class="span2"
+                                                  >«StartUp» նախագիծ սկսնակների
+                                                       համար</span
+                                                  >
+                        <span
+                        >StartUp նախագիծը<br/>
+                                                       նախատեսված է սկսնակ<br/>
+                                                       մասնագետների համար, իրենց<br/>
+                                                       սովորածը և հմտությունները<br/>
+                                                       ցուցադրելու համար<br/>
+                                                       ինչպես նաև․․․</span
+                        >
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Հայտարարությունը<br/>
+                                                            տեղադրվել է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Դիմելու<br/>
+                                                            վերջնաժամկետն է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <a href="" class="a2">
+                            <div>Իմանալ Ավելին</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="img.png" alt="" class="div-img"/></div>
+                    <span class="text"
+                    >Նորություններ<br/>
+                                             Առաջարկներ</span>
+                </div>
+                <div class="media-350-name-text">
+                                             <span
+                                             >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                                             >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <img src="pic2.png" alt=""/>
+                <div class="div-text">
+                                             <span class="span2"
+                                             >«StartUp» նախագիծ սկսնակների
+                                                  համար</span
+                                             >
+                    <span
+                    >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                    >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="img.png" alt="" class="div-img"/></div>
+                    <span class="text"
+                    >Նորություններ<br/>
+                                             Առաջարկներ</span>
+                </div>
+                <div class="media-350-name-text">
+                                             <span
+                                             >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                                             >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <img src="pic2.png" alt=""/>
+                <div class="div-text">
+                                             <span class="span2"
+                                             >«StartUp» նախագիծ սկսնակների
+                                                  համար</span
+                                             >
+                    <span
+                    >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                    >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div1">
+            <div class="media-350-name-img">
+                <div class="media-350-name-container">
+
+                    <div><img src="img.png" alt="" class="div-img"/></div>
+                    <span class="text"
+                    >Նորություններ<br/>
+                                             Առաջարկներ</span>
+                </div>
+                <div class="media-350-name-text">
+                                             <span
+                                             >StartUp նախագիծը<br/>
+                                                  նախատեսված է սկսնակ<br/>
+                                                  մասնագետների համար, իրենց<br/>
+                                                  սովորածը և հմտությունները<br/>
+                                                  ցուցադրելու համար<br/>
+                                                  ինչպես նաև․․․</span
+                                             >
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Հայտարարությունը<br/>
+                                                       տեղադրվել է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <div class="a1">
+                                                  <span class="c1">
+                                                       Դիմելու<br/>
+                                                       վերջնաժամկետն է՝</span
+                                                  ><span class="c2">20․05․2021</span>
+                    </div>
+                    <a href="" class="a2">
+                        <div>Իմանալ Ավելին</div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="media-display-none">
+                <div class="media-350-name-img">
+                    <div class="media-350-name-container">
+
+                        <div><img src="img.png" alt="" class="div-img"/></div>
+                        <span class="text"
+                        >Նորություններ<br/>
+                                                  Առաջարկներ</span>
+                    </div>
+                    <div class="media-350-name-text">
+                                                  <span
+                                                  >StartUp նախագիծը<br/>
+                                                       նախատեսված է սկսնակ<br/>
+                                                       մասնագետների համար, իրենց<br/>
+                                                       սովորածը և հմտությունները<br/>
+                                                       ցուցադրելու համար<br/>
+                                                       ինչպես նաև․․․</span
+                                                  >
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Հայտարարությունը<br/>
+                                                            տեղադրվել է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Դիմելու<br/>
+                                                            վերջնաժամկետն է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <a href="" class="a2">
+                            <div>Իմանալ Ավելին</div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="media-display-none">
+                    <img src="pic2.png" alt=""/>
+                    <div class="div-text">
+                                                  <span class="span2"
+                                                  >«StartUp» նախագիծ սկսնակների
+                                                       համար</span
+                                                  >
+                        <span
+                        >StartUp նախագիծը<br/>
+                                                       նախատեսված է սկսնակ<br/>
+                                                       մասնագետների համար, իրենց<br/>
+                                                       սովորածը և հմտությունները<br/>
+                                                       ցուցադրելու համար<br/>
+                                                       ինչպես նաև․․․</span
+                        >
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Հայտարարությունը<br/>
+                                                            տեղադրվել է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <div class="a1">
+                                                       <span class="c1">
+                                                            Դիմելու<br/>
+                                                            վերջնաժամկետն է՝</span
+                                                       ><span class="c2">20․05․2021</span>
+                        </div>
+                        <a href="" class="a2">
+                            <div>Իմանալ Ավելին</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        Ավելին<br/><img src="Vector (6).png" alt=""/>
+    </div>
+</section>
+<section class="section3">
+    <h2>Նորություններ</h2>
+    <div class="div-main">
+        <div class="div2">
+            <img src="pic7.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="pic8.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="pic9.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="div2">
+            <img src="pic10.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="pic11.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="pic12.png" alt=""/>
+            <div class="div-text1">
+                                        <span class="span2"
+                                        >«IBM»-ը հրապարակել է<br/>
+                                             պահանջված<br/>
+                                             ծրագրավորման<br/>
+                                             լեզուների ցանկը</span
+                                        >
+                <span class="sec2span"
+                >«IBM»-ը հրապարակել<br/>
+                                             է պահանջված<br/>
+                                             ծրագրավորման լեզուների ցանկը,<br/>
+                                             որը<br/>
+                                             գլխավորում է «c++»<br/>
+                                             lign: center;ծրագրավորման լեզուն,<br/>
+                                             իսկ երկրորդ հորիզոնականում ․․․</span
+                >
+                <a href="" class="a2">
+                    <div>Իմանալ Ավելին</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <span class="text-end"
+    >Ավելին<br/>
+                              <img src="Vector (6).png" alt=""/>
+                         </span>
+</section>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+@media (max-width: 1100px) {
+  * {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+}

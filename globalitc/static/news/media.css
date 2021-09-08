@@ -1,0 +1,125 @@
+@media (max-width: 1368px) {
+    .div-main{   
+        width: 90% !important ;
+       
+    }
+    .div1{
+        max-width: 550px !important;
+    }
+    .div2{
+     max-width: 550px !important;
+    
+ }
+ .div-main img{
+    width: 260px !important;
+    height: 383px !important;
+}
+
+}
+   @media(max-width:1000px){
+       .div-main img{
+     width: 350px !important;
+     height: 383px !important;
+}
+    .section1 img{
+        max-width: 
+        455px !important;
+         max-height: 365px !important;
+   }
+    .div1{
+        max-width: 742px !important;
+    }
+    .div2{
+     max-width: 742px !important;
+    
+ }
+      
+    .section3{
+        width: 75% !important ;
+    }
+   
+    .text {
+         font-size: 50px !important;
+    }
+
+   }
+  
+   
+@media (max-width: 768px) {
+    .div-main img{
+        width: 332px !important;
+        height: 351px !important;
+   }
+    .section1 img{
+        max-width: 
+        348.06px !important;
+         max-height: 
+         279.57px !important;
+   }
+    .div1{
+        max-width: 705px !important;
+    }
+    .div2{
+     max-width: 705px !important;
+    
+ }
+    .text {
+         font-size: 36px;
+    }
+    .text {
+        font-size: 36px !important;
+   }
+   .span-350{
+    display: block !important;
+    text-align: center ;
+    width: 80%;
+    margin:20px  auto;
+    color: #fff;
+     }
+     .span{
+         display: none !important;
+     }
+ 
+}
+@media (max-width: 565px){ 
+    .media-display-none{
+     display: none !important;
+    }
+   
+    
+    .media-350-name-img{
+        display: block !important;
+       }
+    .span2{
+        font-size: 15px !important;
+    }
+    .section1 img{
+        max-width:169.63px !important;
+         max-height: 136.25px !important;
+   }
+    .div1{
+        max-width: 302px !important;
+    }
+    .div2{
+     max-width:302px !important;
+     flex-direction: column !important;
+    
+ }
+ .div-text1{
+     width: 100% !important;
+     margin-top: 20px !important; 
+ }
+ .div1 img{
+    width: 76px !important;
+    height: 70px !important;
+ }
+ .div2 img{
+    width: 
+    271px  !important;
+    height: 
+    91px !important;
+ }
+ .text {
+    font-size: 24px !important;
+}
+}

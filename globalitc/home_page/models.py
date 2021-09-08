@@ -2,7 +2,7 @@ from django.db import models
 
 
 class HeaderModels(models.Model):
-    header_title = models.CharField()
+    header_title = models.CharField(max_length=100)
     header_context = models.CharField(max_length=500)
     header_image = models.ImageField(upload_to="HeaderImages")
     in_page = models.BooleanField(default=False)

@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.oll-sections{
+    background-color:   #313131;
+}
+h2{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    padding: 50px 0;
+}
+.container-1{
+    width: 100%;
+    margin: auto;
+  display: flex ;
+  justify-content: space-between ;
+  height: auto ;
+  flex-direction: column;
+  align-items: flex-start;
+  h1{
+      width: 90%;
+      padding-bottom: 30px;
+      color: #fff;
+  }
+
+}
+.section-1{
+    width: 85%;
+    padding-top: 150px ;
+    padding-bottom: 50px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    .section-1-text-p{
+        p{
+            color: #fff;
+            width: 100%;
+            line-height: 
+            27.94px;
+        }
+        padding-bottom: 20px;
+    }
+   .section-1-absalute{
+         width: 100%;
+         left: 200px;
+         display: flex;
+         justify-content: space-between;
+
+   }
+     a{
+         margin-right: 20px;
+         text-decoration: none;
+         color: white;
+         background: linear-gradient(92.88deg, #B565D8 9.74%, #EE609C 99.48%);
+         padding: 10px 30px;
+         border-radius: 10px;
+     }
+ }
+ .img-section-1{
+     width: 50%;
+     padding: 50px 0;
+     z-index: 0;
+    img{
+        max-width: 700px;
+    }
+}
+
+h1 {
+font-size: 50px;
+
+}
+.href-flex{
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.iconss{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+   
+    i{
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+#section-2{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 40px;
+    padding: 30px 0 ;
+    h3{
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+    }
+    .section-2-container{
+        width: 480px;
+        height: 435px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+       
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        transition: .3s;
+        cursor: pointer;
+     .section-2-href{
+        width: 
+        328px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       height: 60px;
+        margin-right: 20px;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(92.88deg, #B565D8 9.74%, #EE609C 99.48%);
+        padding: 10px 30px;
+        border-radius: 10px;
+     }   
+    }
+    .section-2-container:hover{
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+#section-3{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0 ;
+    grid-gap: 40px;
+    h3{
+        color: #fff;
+        text-align: center;
+        font-size: 
+        25px;
+    }
+    .section-3-container{
+        width: 480px;
+        height: 435px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      
+       
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        transition: .3s;
+        cursor: pointer;
+     .section-3-href{
+         width: 
+         328px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        height: 60px;
+        margin-right: 20px;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(92.88deg, #B565D8 9.74%, #EE609C 99.48%);
+        padding: 10px 30px;
+        border-radius: 10px;
+     }   
+    }
+    .section-3-container:hover{
+        background: rgba(255, 255, 255, 0.12);
+    }
+}

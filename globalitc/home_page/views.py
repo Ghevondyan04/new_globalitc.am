@@ -3,6 +3,7 @@ from django.views.generic.base import TemplateView
 from .models import HeaderModels, Faculties, FacultyCourse, Services, Partners
 from blog_and_contact.models import Offer, News
 from blog_and_contact.forms import ContactWithUsForm, SubscribeForm
+from .models import Services
 
 
 # class HomePageView(TemplateView):
@@ -53,3 +54,13 @@ def home_view(request):
     }
 
     return render(request, 'index.html', context)
+
+
+def services_list_view(request):
+    services_list = Services.objects.all()
+
+    context = {
+        "services_data": services_list,
+    }
+
+    return render(request, 'services_list.html', context)

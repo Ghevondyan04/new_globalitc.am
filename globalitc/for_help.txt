@@ -1,1 +1,16 @@
 In app 'home_page': home page data,faculties data,services data,partners data.
+
+
+ABOI HAMAR
+
+1. base.html 582line: Ab jan kalendar yntrelu hnaravorutyun chka, meke et formen chem drel bayc inqy patrast ka zut petqa dnel ytex et xndiry vor kar dra hamar chem drel,ira formen gtnvuma blog_and_contact.forms.CallOrder.............
+
+2.base.html 314ic sksac et nav i menu i mej nayi kjoges inch paha,ynenc en are vor mi ciklov ches kara lces amen syuni hamar pti cikl fras ,vor mi cikla linum mi gcov ijnuma.........
+
+3.Es erkusy vor anes mihat indexi het stugi,adminkic porcnakan nkarner qic tes normal ashxatuma........
+
+4.services_html: Footeri cssnery chen ashxtum
+
+5.News ejy normal arac chi mihat karas news.htmly nayes,shat vata grac ban chem jogum
+
+HARCERI DEPQUM ZANGAHAREL +37494543413 karch hamarin

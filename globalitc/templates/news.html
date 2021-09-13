@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-    {% block css_links %}
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="{% static 'news/styles.css' %}"/>
-    <link rel="stylesheet" href="{% static 'news/media.css' %}">
+{% block css_links %}
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="{% static 'news/styles.css' %}"/>
+<link rel="stylesheet" href="{% static 'news/media.css' %}">
 
-    {% endblock %}
+{% endblock %}
 
 {% block main %}
 
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="media-350-name-text">
-                                             <span>{{ offer.offer_context }}</span>
+                    <span>{{ offer.offer_context }}</span>
                     <div class="a1">
                                                   <span class="c1">
                                                        Հայտարարությունը<br/>

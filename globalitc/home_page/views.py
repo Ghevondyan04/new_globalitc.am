@@ -64,3 +64,15 @@ def services_list_view(request):
     }
 
     return render(request, 'services_list.html', context)
+
+
+def fac_list_view(request):
+    faculties_list = Faculties.objects.all()
+    faculties_course_data = FacultyCourse.objects.all()
+
+    context = {
+        "faculties_list": faculties_list,
+        "faculties_course_data": faculties_course_data,
+    }
+
+    return render(request, 'fac_list.html', context)

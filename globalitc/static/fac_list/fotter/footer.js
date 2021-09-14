@@ -2,6 +2,8 @@ let body=document.getElementById("body")
 body.innerHTML+=`
 <footer>
         <div class="col-1">
+
+        
          <div class="courses">  
             <h4>Դասընթացներ</h4>
             <ul class="courses-1">

@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from .models import HeaderModels, Faculties, FacultyCourse, Services, Partners
+from .models import HeaderModels, Faculties, FacultyCourse, Services, Partners, OtherServices
 from blog_and_contact.models import Offer, News
 from blog_and_contact.forms import ContactWithUsForm, SubscribeForm
-from .models import Services
 
 
 # class HomePageView(TemplateView):
@@ -58,21 +57,49 @@ def home_view(request):
 
 def services_list_view(request):
     services_list = Services.objects.all()
+    other_services_list = OtherServices.objects.all()
 
     context = {
         "services_data": services_list,
+        "other_services_list": other_services_list,
     }
 
     return render(request, 'services_list.html', context)
 
 
-def fac_list_view(request):
-    faculties_list = Faculties.objects.all()
+def fac_program_view(request):
     faculties_course_data = FacultyCourse.objects.all()
 
     context = {
-        "faculties_list": faculties_list,
         "faculties_course_data": faculties_course_data,
     }
 
-    return render(request, 'fac_list.html', context)
+    return render(request, 'facultet_list_pages/ItFacultet.html', context)
+
+
+def fac_multimedia_view(request):
+    faculties_course_data = FacultyCourse.objects.all()
+
+    context = {
+        "faculties_course_data": faculties_course_data,
+    }
+
+    return render(request, 'facultet_list_pages/Multimedia.html', context)
+
+
+def fac_web_program_view(request):
+    faculties_course_data = FacultyCourse.objects.all()
+
+    context = {
+        "faculties_course_data": faculties_course_data,
+    }
+
+    return render(request, 'facultet_list_pages/webfacutet.html', context)
+
+
+def faculties_view(request):
+    faculty = Faculties.objects.all()
+
+    return render(request, context={'faculty': faculty, })
+
+

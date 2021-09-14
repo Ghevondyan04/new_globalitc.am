@@ -16,6 +16,7 @@ class Faculties(models.Model):
     fac_image = models.ImageField(upload_to="FacultiesImages")
     fac_icon = models.ImageField(upload_to="FacultiesIcons")
     large_icon = models.ImageField(upload_to="FacultiesLargeIcons")
+    slug = models.SlugField(unique=True,max_length=15)
 
     def __str__(self):
         return f"{self.fac_title}"
@@ -36,11 +37,23 @@ class FacultyCourse(models.Model):
 class Services(models.Model):
     service_title = models.CharField(max_length=30)
     service_image = models.ImageField(upload_to="ServicesImages")
-    other_service = models.BooleanField(default=False)
+    service_icon = models.ImageField(upload_to="ServicesIcons")
     in_home_page = models.BooleanField(default=True)
+    where_in_menu = models.IntegerField(verbose_name="Մենույի ո՞ր սյունակում լինի(1,2,3)")
 
     def __str__(self):
         return f"{self.service_title}"
+
+
+class OtherServices(models.Model):
+    title = models.CharField(max_length=30)
+    image = models.ImageField(upload_to="OtherServicesImages")
+    service_icon = models.ImageField(upload_to="OtherServicesIcons")
+    in_home_page = models.BooleanField(default=True)
+    where_in_menu = models.IntegerField(verbose_name="Մենույի ո՞ր սյունակում լինի(1,2)")
+
+    def __str__(self):
+        return f"{self.title}"
 
 
 class Partners(models.Model):

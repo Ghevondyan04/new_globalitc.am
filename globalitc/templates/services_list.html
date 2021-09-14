@@ -55,8 +55,8 @@
 
     </div>
     {% for services in services_data %}
-        {% if not services.other_service %}
     <div id="section-2">
+
         <div class="section-2-container">
             <h3>{{ services.service_title }}</h3>
             <img src="{{ services.service_image.url }}" alt="">
@@ -65,19 +65,18 @@
             </div>
         </div>
     </div>
-        {% endif %}
+    {% endfor %}
     <h2>Այլ Ծառայություններ</h2>
     <div id="section-3">
-        {% if services.other_service %}
+        {% for other_services in other_services_list %}
         <div class="section-3-container">
-            <h3>{{ services.service_title }}</h3>
-            <img src="{{ services.service_image.url }}" alt="">
+            <h3>{{ other_services.title }}</h3>
+            <img src="{{ other_services.image.url }}" alt="">
             <div>
                 <a href="#" class="section-3-href">Պատվիրել</a>
             </div>
         </div>
     </div>
-        {% endif %}
     {% endfor %}
 </div>
 

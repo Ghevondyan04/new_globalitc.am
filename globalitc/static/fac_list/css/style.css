@@ -12,6 +12,11 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
+nav{
+    top: 0 !important;
+}
+
 main {
     width: 100%;
     display: -webkit-box;
@@ -92,7 +97,18 @@ main {
     margin: 50px 0;
     margin-top: 0px;
 }
-
+.section-2 a{
+    text-decoration: none;
+    cursor: pointer !important;
+    
+}
+.section-2 .it {
+    cursor: pointer;
+}
+.container-x a{
+    color: #908787;
+    text-decoration: none;
+}
 .section-2 .web i{
     color: white;
     font-size: 22px;

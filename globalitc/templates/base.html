@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'base/css/owl.carousel.min.css' %}">
     <!--    <link rel="stylesheet" href="../css/signup.css">-->
     <!--    <link rel="stylesheet" href="../css/signup-2.css">-->
     <!--    <link rel="stylesheet" href="../css/signup-3.css">-->
@@ -18,6 +17,9 @@
           integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
           crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static 'base/css/menyu.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/footer.css' %}">
+
+
 
     <title>
         {% block title %}
@@ -41,7 +43,8 @@
 <!--               </div>-->
 <!--             <div class="secrlct-img">-->
 <!--                 <a href="#" class="select">Ներբեռնել նկար <i class="fa fa-arrow-up"></i></a>-->
-<!--             </div>-->
+<!--             </div>-->￼
+￼
 <!--           </div>-->
 <!--           -->
 <!--           <div class="signup-inputs-select">-->
@@ -49,14 +52,16 @@
 <!--            <input type="text" placeholder="Ընկերության տնօրեն">-->
 <!--            <input type="text" placeholder="Ընկերության հեռախոսահամարը">-->
 <!--            <input type="email" placeholder="Ընկերության էլ․ փոստ">-->
-<!--            <input type="text" placeholder="Ընկերության հասցեն">-->
+<!--            <input type="text" placeholder="Ընկերության հասցեն">￼
+￼-->
 <!--            <div class="seclect-absalute-2">-->
 <!--                <i class="fa fa-angle-down"></i>-->
 <!--                <select name="" id="">-->
 <!--                    <option value="">Գործունեության ոլորտը </option>-->
 <!--                    -->
 <!--                </select>-->
-<!--            </div>-->
+<!--            </div>-->￼
+￼
 <!--          <div class="seclect-absalute-2">-->
 <!--            <i class="fa fa-angle-down"></i>-->
 <!--            <select name="" id="">-->
@@ -303,140 +308,97 @@
 
         <div class="nav-container-sections-3">
             <ul>
-                <li><a href="#">Գլխավոր</a></li>
+                <li><a href="{% url 'home' %}">Գլխավոր</a></li>
                 <li class="facultet"><a href="#"> Ֆակուլտետներ <i class="fa fa-angle-down"></i></a>
                     <div class="facultet-hover">
                         {% for fac in faculties_data %}
-                        <a href="#"> {{ fac.fac_title }} <img src="{{ fac.fac_icon.url }}" alt=""> </a>
+                        <a href="{% url 'faculties_web' %}"> {{ fac.fac_title }} <img src="{{ fac.fac_icon.url }}" alt=""> </a>
                         <div class="line-1"></div>
                         {% endfor %}
                     </div>
                 </li>
-                <li class="secrviced-hover"><a href="#"> Ծառայություններ <i class="fa fa-angle-down"></i></a>
+                <li class="secrviced-hover">
+                    <a href="#"> Ծառայություններ <i class="fa fa-angle-down"></i></a>
                     <div class="services">
-                        {% for serv in services_data %}
-                            {% if other_service %}
                         <h3 class="services-h3">Այլ ծառայություններ</h3>
+                        <!-- sovorakan carayutyunner -->
+                        {% for serv in services_data %}
+
                         <div class="serivices-container">
                             <div class="services-contaier-sections">
+                                {% if serv.where_in_menu == 1 %}
                                 <div class="services-text">
                                     <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">{{ serv.serv_title }}</a></p>
-                                        <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
-
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-
-                            </div>
-                            {% endif %}
-
-                        </div>
-                        <div class="serivices-container">
-                            <div class="services-contaier-sections">
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">{{ serv.serv_title }}</a></p>
+                                        <p><a href="#" class="font-14">{{ serv.service_title }}</a></p>
                                         <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
                                     </div>
                                     <div class="line-3"></div>
                                 </div>
-
-                            </div>
-                        </div>
-                         {% endfor %}
-                        <div class="serivices-container">
-                            <div class="services-contaier-sections">
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-
+                                {% endif %}
                             </div>
                         </div>
                         <div class="serivices-container">
                             <div class="services-contaier-sections">
+                                <!-- sovorakan carayutyunner-->
+                                {% if serv.where_in_menu == 2 %}
                                 <div class="services-text">
                                     <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
+                                        <p><a href="#" class="font-14">{{ serv.service_title }}</a></p>
+                                        <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
                                     </div>
                                     <div class="line-3"></div>
                                 </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-
-
+                                {% endif %}
                             </div>
                         </div>
                         <div class="serivices-container">
                             <div class="services-contaier-sections">
+                                {% if serv.where_in_menu == 2 %}
                                 <div class="services-text">
                                     <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt="" class="aaa1"></a>
+                                        <p><a href="#" class="font-14">{{ serv.service_title }}</a></p>
+                                        <a href=""><img src="{{ serv.service_image.url }}" alt=""></a>
                                     </div>
                                     <div class="line-3"></div>
                                 </div>
-                                <div class="services-text">
-                                    <div class="services-text-cotnaier">
-                                        <p><a href="#" class="font-14">Վեբ Կայքերի Պատրաստում</a></p>
-                                        <a href=""><img src="{% static 'base/image/1111.svg' %}" alt=""></a>
-                                    </div>
-                                    <div class="line-3"></div>
-                                </div>
-
-
+                                {% endif %}
                             </div>
                         </div>
+                        {% endfor %}
+                        <!--  Ayl carayutyunner   -->
+                        {% for other in services_data %}
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                {% if other.where_in_menu == 1 %}
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">{{ other.title }}</a></p>
+                                        <a href=""><img src="{{ other.image.url }}" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="serivices-container">
+                            <div class="services-contaier-sections">
+                                {% if other.where_in_menu == 2 %}
+                                <div class="services-text">
+                                    <div class="services-text-cotnaier">
+                                        <p><a href="#" class="font-14">{{ other.title }}</a></p>
+                                        <a href=""><img src="{{ other.image.url }}" alt=""></a>
+                                    </div>
+                                    <div class="line-3"></div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
                 </li>
-                <!-- ES TSARAYUTYAN MEOMENTY VONCOR ASUMA TROUBLE SITUATION-->
+                <!-- -->
                 <li><a href="#">Աշխատանք </a></li>
-                <li class="work"><a href="#" class="work_a"><img src="{% static 'base/image/cil_hamburger-menu.sv' %}"
+                <li class="work"><a href="#" class="work_a"><img src="{% static 'base/image/cil_hamburger-menu.svg' %}"
                                                                  alt=""
                                                                  class="manu-none"></a>
                     <div class="work-hover">
@@ -482,7 +444,7 @@
                 <div id="manu-320-block">
                     <div class="menu-320-products">
                         <div class="logos-manu-320">
-                            <img src="{% static 'base/image/serch (2).svg' %}" alt="" class="armenia-1"
+                            <img src="{% static 'base/image/serch(2).svg' %}" alt="" class="armenia-1"
                                  id='search-on-1'>
                             <img src="{% static 'base/image/dark-font.svg' %}" alt="" id="armenia-1-320"
                                  class="armenia-2">
@@ -558,7 +520,6 @@
 
 
     </div>
-
 </nav>
 
 <div id="cool-registration">
@@ -608,7 +569,7 @@
 
 
 <!--FOOTER START-->
-</div>
+
 <footer>
     <div class="col-1">
 
@@ -663,29 +624,17 @@
         (ՍՊԸ)-ի կողմից, որը հանդիսանում է ընկերության Պաշտոնական կայքէջը: Կայքից նույթ տեղադրելիս հղումը gitedu.am-ին
         պարտադիր է:</p>
 </footer>
-</div>
-<!--PERHAPS FOOTER HAVE ENDED-->
 
-
-
+<!--FOOTER HAVE ENDED-->
 <script src="{% static 'base/js/signup.js' %}"></script>
 <script src="jquery-3.5.1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="{% static 'base/js/owl.carousel.min.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="{% static 'base/js/particles.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<!-- <script src="../js/script.js"></script> -->
-<script src="{% static 'base/js/menyu.js' %}"></script>
+<script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 {% block js_scripts %}
 {% endblock %}
 </body>

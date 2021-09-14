@@ -132,15 +132,7 @@ function AddClass(id){
 
 let items=document.getElementById('container')
 function InerItems(itemx){
-    items.innerHTML = " ";
 itemx.map((item,index) =>{
-    items.innerHTML +=`
-    <div class="item item${index}">
-    <h3>${item.name}</h3>
-    <img src="${item.img}" alt="${item.img}">
-    <button>Դիմել</button>
-    </div>
-    `
 })
 }
 InerItems(items_obj);

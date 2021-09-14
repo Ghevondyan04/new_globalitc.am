@@ -1,0 +1,176 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block css_links %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'fac_list/css/style.css' %}">
+{% endblock %}
+
+<!-- ============  Menu ===================================== -->
+<!--========================================================================-->
+{% block main %}
+<main>
+
+
+    <section class="service_1">
+        <div class="col_s-1">
+            <h1>Ֆակուլտետներ</h1>
+            <p>«Gloab IT» ըբգկերությունում առկան են երեք ֆակուլտետներ, վեբ ծրագրավորման, ծրագրավորման և մուլտիմեդիայի։
+                «ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից: Մենք առաջարկում ենք ծրագրային
+                տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել ձեր բիզնեսի շահութաբերությունը և նպաստել աճին: Մեր
+                ստեղծարար թիմը համատեղ ուժերով տալիս Է նորարարական լուծումներ, որոնք նպաստում են ձեր բիզնեսի թիրախային
+                լսարանի ներգրավմանը: «ԳԼՈԲԱԼ ԻՏ» ՍՊԸ-ն հիմնադրվել է 2017թ.-ի հոկտեմբերի 19ին Գ. Քոսյանի կողմից: Մենք
+                առաջարկում ենք ծրագրային տարատեսակ լուծումներ, որոնց նպատակն է մեծացնել ձեր բիզնեսի շահութաբերությունը և
+                նպաստել աճին: Մեր ստեղծարար թիմը համատեղ ուժերով տալիս Է նորարարական լուծումներ, որոնք նպաստում են ձեր
+                բիզնեսի թիրախային լսարանի ներգրավմանը:</p>
+        </div>
+        <div class="col_s-2">
+            <img src="{% static 'fac_list/menu_images/section1.svg' %}" alt="servicer-1">
+        </div>
+    </section>
+
+    <!-- ======================== ՖակուլտետներԻ անվանունները ================================ -->
+    <section class="section-2">
+        <!-- == cliknery vori jamnak poxeluya taki infon  -->
+        <a href="{% url 'faculties_web' %}">
+            <div class="web" id='web' onclick="AddClass(id)">
+                <img src="{% static 'fac_list/item-img/_.svg' %}" alt="web">
+                <p>Վեբ Ծրագրավորման
+                    Ֆակուլտետ</p>
+            </div>
+        </a>
+        <!-- ========================= -->
+        <a href="{% url 'faculties_programming' %}">
+            <div class="it" id="it" onclick="AddClass(id)">
+                <img src="{% static 'fac_list/item-img/{;}.svg' %}" alt="{;}">
+                <p>Ծրագրավորման
+                    Ֆակուլտետ</p>
+            </div>
+            <!-- ========================= -->
+        </a>
+        <a href="{% url 'faculties_multimedia' %}">
+            <div class="multimedia multix active" id='multi' onclick="AddClass(id)">
+                <img src="{% static 'fac_list/item-img/multi.svg' %}" alt="multi">
+                <p>Մուլտիմեդիայի
+                    Ֆակուլտետ</p>
+            </div>
+        </a>
+
+    </section>
+    <!-- ================================================================ -->
+
+    <div class="container-x">
+        <div class="cont1">
+            <img src="{% static 'fac_list/item-img/Group 771324.svg' %}" alt="">
+            <ul class="chekgroop">
+                <li>
+                    <!-- ==filtery yst gneri  achman kargi =============================   -->
+                    <a href="#">
+                        <div class="form_radio_btn">
+                            <input id="radio-1" checked onclick="Checked1()" class="r-1" type="radio" name="b">
+                            <label for="radio-1"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- == =============================   -->
+                    <p id="p0">Ըստ գների աճման կարգի</p>
+                </li>
+                <li>
+                    <!-- ==filtery yst gneri nvazman kargi =============================   -->
+                    <a href="#">
+                        <div class="form_radio_btn">
+                            <input id="radio-2" onclick="Checked1()" class="r-1" type="radio" name="b">
+                            <label for="radio-2"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- == =============================   -->
+                    <p id="p1">Ըստ գների նվազման կարգի</p></li>
+                <li>
+                    <!-- ==filtery yst zexchi =============================   -->
+                    <a href="#">
+                        <div class="form_radio_btn">
+                            <input id="radio-3" onclick="Checked1()" class="r-1" type="radio" name="b">
+                            <label for="radio-3"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- ===============================   -->
+                    <p id="p2">Զեղչված դասընթացները</p>
+                </li>
+            </ul>
+        </div>
+        <!-- ======================== ՖակուլտետներԻ անվանունները  poqr ekrani jamanak ================================ -->
+        <div class="cont-2 cont1" id="cont2">
+            <img id='img-goop' class="" src="{% static 'fac_list/item-img/Vector (4).svg' %}" alt="vector">
+            <ul id="Facultiesgroop" class="chekgroop">
+                <li>
+                    <!-- ==================================================== -->
+                    <a href="{% url 'faculties_web' %}">
+                        <div class="form_radio_btn">
+                            <input id="radio-4" checked onclick="Checked(id)" class="r1" type="radio" name="a">
+                            <label for="radio-4"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- ==================================================== -->
+                    <p id="p3">Վեբ Ծրագրավորում</p></li>
+                <li>
+                    <!-- ==================================================== -->
+                    <a href="{% url 'faculties_programming' %}">
+                        <div class="form_radio_btn">
+                            <input id="radio-5" onclick="Checked(id)" class="r1" type="radio" name="a">
+                            <label for="radio-5"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- ==================================================== -->
+                    <p id="p4">Ծրագրավորում</p></li>
+                <li>
+                    <!-- ==================================================== -->
+                    <a href="{% url 'faculties_multimedia' %}">
+                        <div class="form_radio_btn">
+                            <input id="radio-6" onclick="Checked(id)" class="r1" type="radio" name="a">
+                            <label for="radio-6"><i class="fas fa-check"></i></label>
+                        </div>
+                    </a>
+                    <!-- ==================================================== -->
+                    <p id=p5>Մուլտիմեդիա</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===============  Վեբ Ծրագրավորման Ֆակուլտետ======================== -->
+    <section class="section-3">
+        <div class="container" id="container">
+
+            <!-- ===========  bloknerna =================    cikyly sranc hamar pti frra      -->
+
+
+            {% for course in faculties_course_data %}
+            {% if course.faculty == "Multimedia" %}
+            <div class="item item1">
+                <h3>Front End Ծրագրավորում</h3>
+                <img src="{{ course.course_image.url }}" alt="aaa">
+                <button>Դիմել</button>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!-- ================================================= -->
+        </div>
+    </section>
+
+    <!-- ====================================================================== -->
+
+</main>
+{% endblock %}
+{% block js_scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+<!--<script src="{/fotter/footer.js"></script>-->
+<script src="{% static 'fac_list/js/script.js' %}"></script>
+{% endblock %}

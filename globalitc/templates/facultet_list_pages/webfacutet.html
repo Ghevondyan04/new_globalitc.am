@@ -150,7 +150,7 @@
 
 
             {% for course in faculties_course_data %}
-            {% if course.faculty == "web" %}
+            {% if course.faculty.fac_title == "web" %}
             <div class="item item1">
                 <h3>Front End Ծրագրավորում</h3>
                 <img src="{{ course.course_image.url }}" alt="aaa">

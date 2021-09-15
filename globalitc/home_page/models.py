@@ -16,7 +16,7 @@ class Faculties(models.Model):
     fac_image = models.ImageField(upload_to="FacultiesImages")
     fac_icon = models.ImageField(upload_to="FacultiesIcons")
     large_icon = models.ImageField(upload_to="FacultiesLargeIcons")
-    slug = models.SlugField(unique=True,max_length=15)
+    slug = models.SlugField(unique=True, max_length=15)
 
     def __str__(self):
         return f"{self.fac_title}"
@@ -32,6 +32,90 @@ class FacultyCourse(models.Model):
 
     def __str__(self):
         return f"{self.course_title}"
+
+
+class FacultiesDescriptions(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30)
+    context = models.TextField()
+    image = models.ImageField(upload_to="CourseDescription")
+
+    def __str__(self):
+        return f'{self.course} {self.name}'
+
+
+class CourseCourses(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30)
+    context = models.TextField()
+    period = models.CharField(max_length=30)
+    vacation = models.CharField(max_length=30)
+    image = models.ImageField(upload_to="CourseCourses")
+
+    def __str__(self):
+        return f'{self.course} {self.name}'
+
+
+class CourseInclude(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="CourseCourses")
+
+    def __str__(self):
+        return f'{self.course} {self.name}'
+
+
+class CourseLevels(models.Model):
+    levels_list = [
+        (1, "LevelOne"),
+        (2, "LevelTwo"),
+        (3, "LevelThree")
+    ]
+
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    level = models.IntegerField(choices=levels_list)
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.course} {self.name}'
+
+
+class CourseVideo(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    video = models.FileField()
+    video_url = models.URLField()
+    description = models.TextField()
+
+    def __str__(self):
+        return f'{self.course}'
+
+
+class CourseTeachers(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=30)
+    image = models.ImageField(upload_to="CourseTeachers")
+    facebook_link = models.URLField()
+    instagram_link = models.URLField()
+    twitter_link = models.URLField()
+    linkedin_link = models.URLField()
+
+    def __str__(self):
+        return f'{self.course} {self.full_name}'
+
+
+class CourseCertificate(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="CourseCertificate")
+    full_name = models.CharField(max_length=30)
+    context = models.TextField()
+    date = models.DateField()
+
+    def __str__(self):
+        return f'{self.course} {self.full_name}'
+
+
+class CourseComments(models.Model):
+    course = models.ForeignKey(FacultyCourse, on_delete=models.CASCADE)
 
 
 class Services(models.Model):

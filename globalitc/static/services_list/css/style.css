@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body{
+    font-family: sans-serif;
+}
+
 .oll-sections {
   background-color: #313131;
 }

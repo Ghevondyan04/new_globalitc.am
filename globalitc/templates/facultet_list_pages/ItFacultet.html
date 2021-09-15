@@ -1,4 +1,4 @@
-{% extends '../base.html' %}
+ {% extends '../base.html' %}
 {% load static %}
 {% block css_links %}
 <meta charset="UTF-8">
@@ -149,9 +149,9 @@
             <!-- ===========  bloknerna =================    cikyly sranc hamar pti frra      -->
 
             {% for course in faculties_course_data %}
-                {% if course.faculty == "Programming" %}
+                {% if course.faculty.fac_title == "Programming" %}
             <div class="item item1">
-                <h3>{{ cource.course_title }}</h3>
+                <h3>{{ course.course_title }}</h3>
                 <img src="{{ course.course_image.url }}" alt="aaa">
                 <button>Դիմել</button>
             </div>

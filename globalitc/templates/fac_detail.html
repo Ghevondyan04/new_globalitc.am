@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-          crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="frontstyle/front.css">
-    <link rel="stylesheet" href="./fotter/footer.css">
-    <link rel="stylesheet" href="./map-F/map-style.css">
-    <title>front</title>
-</head>
-<body id="body">
-<!-- ====================================================================== -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css_links %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'fac_details/frontstyle/front.css' %}">
+<link rel="stylesheet" href="{% static 'fac_details/fotter/footer.css' %}">
+<link rel="stylesheet" href="{% static 'fac_details/map-F/map-style.css' %}">
+{% endblock %}
+
+
+{% block main %}
+
 <main>
     <section class="front_1">
         <div class="text-front">
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div class="img-front">
-            <img src="./front-img/front1.svg" alt="Section1">
+            <img src="{% static 'fac_details/front-img/front1.svg' %}" alt="Section1">
 
         </div>
     </section>
@@ -96,7 +97,7 @@
 
     <section class="Certificate">
         <div class="img">
-            <img src="./front-img/Cercificat.svg" alt="Cercificat">
+            <img src="{% static 'fac_details/front-img/Cercificat.svg" alt="Cercificat">
         </div>
         <div class="text">
             <h2>Տրվող Վկայական</h2>
@@ -120,7 +121,7 @@
         <div class="img">
             <section id="places-map">
                 <div class="map animate-fade-in">
-                    <img src="./front-img/world.svg" alt="Map of Western Union Locations" width="903" height="452"/>
+                    <img src="{% static 'fac_details/front-img/world.svg" alt="Map of Western Union Locations" width="903" height="452"/>
                     <div class="map-pins">
                         <a class="map-location-marker marker-san-francisco tooltip" data-map-title="San Francisco"
                            data-map-link="san-francisco" data-map-image="san-francisco.jpg"
@@ -204,11 +205,14 @@
     </section>
     <!-- <video controls muted src=""></video> -->
 </main>
+
+{% endblock %}
+
+{% block js_scripts %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
 <script src="frontjs/front.js"></script>
 <script src="fotter/footer.js"></script>
-<script src="./map-F/map-script.js"></script>
-</body>
-</html>
+<script src="{% static 'fac_details/map-F/map-script.js"></script>
+{% endblock %}
